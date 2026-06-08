@@ -1,0 +1,16 @@
+[Unit]
+Description=PowerWatch — ping-based mains outage detector
+Documentation=https://github.com/gerryk/PowerWatch
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/powerwatch.sh /etc/powerwatch/powerwatch.conf
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
