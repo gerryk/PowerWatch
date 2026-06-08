@@ -6,7 +6,7 @@ that are **not** on the UPS. When pings have failed for long enough, it
 runs a per-host shutdown hook that drains workloads gracefully before
 calling `systemctl poweroff`.
 
-Three flavours of hook are provided, according to the various sysytems I currentky have:
+Three flavours of hook are provided, according to the various sysytems I currently have:
 
 | Subdir              | Box           | What the hook does                                                                              |
 | ------------------- | ------------- | ----------------------------------------------------------------------------------------------- |
